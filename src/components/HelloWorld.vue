@@ -1,11 +1,19 @@
-<script setup>
-import { ref } from 'vue'
+<script>
+import { ref } from 'vue';
 
-defineProps({
-  msg: String
-})
+export default {
+    name: 'HelloWorld',
+    props: {
+        msg: { type: String, default: 'Message' },
+    },
+    setup() {
+        const count = ref(0);
 
-const count = ref(0)
+        return {
+            count,
+        };
+    },
+};
 </script>
 
 <template>
