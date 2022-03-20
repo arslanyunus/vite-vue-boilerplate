@@ -2,7 +2,7 @@
 import { ref } from 'vue';
 
 export default {
-    name: 'HelloWorld',
+    name: 'hello-world',
     props: {
         msg: { type: String, default: 'Message' },
     },
