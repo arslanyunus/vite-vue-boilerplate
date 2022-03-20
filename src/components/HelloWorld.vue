@@ -1,11 +1,19 @@
-<script setup>
-import { ref } from 'vue'
+<script>
+import { ref } from 'vue';
 
-defineProps({
-  msg: String
-})
+export default {
+    name: 'HelloWorld',
+    props: {
+        msg: { type: String, default: 'Message' },
+    },
+    setup() {
+        const count = ref(0);
 
-const count = ref(0)
+        return {
+            count,
+        };
+    },
+};
 </script>
 
 <template>
@@ -26,7 +34,13 @@ const count = ref(0)
     <a href="https://v3.vuejs.org/" target="_blank">Vue 3 Documentation</a>
   </p>
 
-  <button type="button" @click="count++">count is: {{ count }}</button>
+  <a-button
+      class="text-white rounded bg-blue-400 px-4 py-2 my-4"
+      type="button"
+      @click="count++"
+  >
+      count is: {{ count }}
+  </a-button>
   <p>
     Edit
     <code>components/HelloWorld.vue</code> to test hot module replacement.
