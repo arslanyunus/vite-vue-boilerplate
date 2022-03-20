@@ -34,13 +34,13 @@ export default {
     <a href="https://v3.vuejs.org/" target="_blank">Vue 3 Documentation</a>
   </p>
 
-  <button
+  <a-button
       class="text-white rounded bg-blue-400 px-4 py-2 my-4"
       type="button"
       @click="count++"
   >
       count is: {{ count }}
-  </button>
+  </a-button>
   <p>
     Edit
     <code>components/HelloWorld.vue</code> to test hot module replacement.

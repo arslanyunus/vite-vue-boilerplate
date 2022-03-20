@@ -9,8 +9,9 @@ module.exports = {
     ],
     rules: {
         // override/add rules/settings here
-        semi: ["error", "always"],
-        "comma-dangle": ["error", "always-multiline"],
+        semi: ['error', 'always'],
+        'comma-dangle': ['error', 'always-multiline'],
+        'object-curly-spacing': ['error', 'always'],
     },
     parser: 'vue-eslint-parser',
 };
