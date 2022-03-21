@@ -1,16 +1,18 @@
 <script>
-import { ref } from 'vue';
+import { computed } from 'vue';
+import { useStore } from 'vuex';
 
 export default {
-    name: 'HelloWorld',
+    name: 'hello-world',
     props: {
         msg: { type: String, default: 'Message' },
     },
     setup() {
-        const count = ref(0);
+        const store = useStore();
 
         return {
-            count,
+            count: computed(() => store.state.count),
+            increment: () => store.commit('increment'),
         };
     },
 };
@@ -37,7 +39,7 @@ export default {
   <a-button
       class="text-white rounded bg-blue-400 px-4 py-2 my-4"
       type="button"
-      @click="count++"
+      @click="increment"
   >
       count is: {{ count }}
   </a-button>
